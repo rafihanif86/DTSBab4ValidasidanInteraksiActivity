@@ -24,6 +24,16 @@ public class WelcomeSlideCalendar extends AppCompatActivity {
     }
 
     public void clickContactUs(View view) {
-        // Panggil inplicit intent
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("text/plain");
+        i.putExtra(Intent.EXTRA_EMAIL, new String[]{"dts@polinema.ac.id"});
+        i.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
+        i.putExtra(Intent.EXTRA_TEXT, "Welcome to dts 2019");
+        startActivity(i.createChooser(i, "Pilih email client"));
+    }
+
+    public void clickSignUp(View view){
+        Intent i = new Intent(WelcomeSlideCalendar.this, RegisterActivity.class);
+        startActivity(i);
     }
 }
