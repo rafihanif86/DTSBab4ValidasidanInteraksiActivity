@@ -42,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
 //        Log.d(TAG, "name: " + nama);
 //        Log.d(TAG, "gender: " + jk);
 //        Log.d(TAG, "date: " + tanggal_lahir);
-        Intent intent = new Intent(RegisterActivity.this, RegisterActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, RegisterResultActivity.class);
         intent.putExtra(Key_RegisterActivity, new String[]{nama, tanggal_lahir, jk, username});
         startActivity(intent);
     }
